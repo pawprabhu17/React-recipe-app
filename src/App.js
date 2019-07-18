@@ -4,7 +4,7 @@ import Navigation from './components/Navigation.js';
 import Form from './components/Form.js';
 import Recipes from './components/Recipes.js';
 
-const API_KEY="6c01ee7b9183861270708b6966293bf4";
+const API_KEY=process.env.API_KEY;
 
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
   getRecipe = async (e) =>{
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
-    const api_call= await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
+    const api_call= await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=9`);
     
     const data = await api_call.json();
     this.setState({recipes : data.recipes});
