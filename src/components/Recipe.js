@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class Recipe extends React.Component {
   state = {

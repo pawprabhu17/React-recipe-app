@@ -4,7 +4,7 @@ import Navigation from './components/Navigation.js';
 import Form from './components/Form.js';
 import Recipes from './components/Recipes.js';
 
-const API_KEY=process.env.API_KEY;
+const API_KEY=process.env.REACT_APP_API_KEY;
 
 
 class App extends React.Component {
